@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post a Doubt</title>
+    <link rel="stylesheet" href="../doubts.css">
+    <style>
+        /* Chatbot Floating Icon */
+        #chatbot-icon {
+            position: fixed;
+            bottom: 2%;
+            right: 2%;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000; /* Ensure it stays on top of other elements */
+        }
+  
+        #chatbot-icon img {
+            width: 190%;
+            height: 190%;
+            object-fit: cover;
+        }
+  
+        /* Chatbot iframe container */
+        #chatbot-container {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            width: 400px;
+            height: 450px;
+            border: 1px solid black;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            z-index: 999;
+            background-color:black;
+            display: none; /* Initially hidden */
+        }
+  
+        #chatbot-container iframe {
+            width: 100%;
+            height: 90%;
+            border: none;
+            border-radius: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <h1>Curriculum Guidelines</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="upload.html">Upload Notes</a></li>
+                    <li><a href="view.html">View Notes</a></li>
+                    <li><a href="doubts.html">Post Doubts</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <h1>Post a Doubt</h1>
+        <form id="post-doubt-form">
+            <label for="doubt-title">Doubt Title</label>
+            <input type="text" id="doubt-title" required>
+
+            <label for="doubt-description">Doubt Description</label>
+            <textarea id="doubt-description" required></textarea>
+
+            <button type="submit">Post Doubt</button>
+        </form>
+
+        <h2>All Doubts</h2>
+        <ul id="doubt-list"></ul>
+    </div>
+
+    <script type="module" src="https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/11.0.2/firebase-auth.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js"></script>
+    <script type="module" src="../doubts.js"></script>
+    <footer>
+        <p>&copy;ShareEd.</p>
+    </footer>
+
+</body>
+</html>

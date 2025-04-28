@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>View Notes</title>
+  <link rel="stylesheet" href="../view.css">
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <h1>View Notes</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="upload.html">Upload Notes</a></li>
+          <li><a href="view.html">View Notes</a></li>
+          <li><a href="doubts.html">Post Doubts</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="search-section">
+      <h2>Search Notes</h2>
+      <div class="search-container">
+        <input type="text" id="search-input" placeholder="Search">
+        <button id="search-clear-button">&times;</button>
+        <span class="search-icon">&#128269;</span>
+      </div>
+    </section>
+
+    <!-- Uploaded Notes Section -->
+    <section id="uploaded-notes">
+      <h2>Uploaded Notes</h2>
+      <div id="uploadedNotesList">
+        <!-- Uploaded notes will be loaded here -->
+      </div>
+    </section>
+
+    <!-- Available Notes Section -->
+    <section id="available-notes">
+      <h2>Available Notes</h2>
+      <div id="availableNotesList">
+        <!-- All available notes will be loaded here -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 ShareED. All rights reserved.</p>
+  </footer>
+
+  <script type="module" src="../view.js"></script>
+</body>
+</html>
